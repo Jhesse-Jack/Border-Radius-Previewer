@@ -1,0 +1,38 @@
+#header {
+    align-items: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    background: #c4d6ca;
+    cursor: default;
+    height: 6%;
+    left: 0;
+    line-height: 6%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10001;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75) !important;
+    text-align: center;
+
+    .left {
+        left: 12%;
+
+        .logo {
+            color: #0c110d!important;
+            font-family: "Pacifico", cursive;
+            font-size: 102%;
+            letter-spacing: 150%;
+            margin-top: -75%;
+            text-decoration: none;
+            display: inline-block;
+        }
+    }
+
+    nav {
+        position: absolute;
+        top: 20%;
+        height: inherit;
+        line-height: inherit;
+    }
+}

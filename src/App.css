@@ -41,12 +41,25 @@
   float: left;
 }
 
-.box-wrap {
-  width: 10%;
+/* .box-wrap {
+  width: 5%;
   height: 10%;
   background-color: green;
   float: right;
-  border-radius: 30%;
+  border-radius: 20%;
   text-align: center;
   justify-content: center;
+} */
+
+.square {
+  border: 5px solid red;
+  text-align: center;
+  justify-content: center;
+  width: 70%;
+}
+
+.square:after {
+  content: "";
+  display: block;
+  /* padding-bottom: 100%; */
 }

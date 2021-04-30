@@ -1,4 +1,3 @@
-//import logo from './logo.svg';
 import './App.css';
 import React, { useState} from 'react';
 import './bootstrap.min.css';
@@ -9,6 +8,13 @@ function App() {
   let [topRight, setTopRight] = useState('');
   let [bottomLeft, setBottomLeft] = useState('');
   let [bottomRight, setBottomRight] = useState('');
+  //const box = document.querySelector('.box');
+  //let initValue = getComputedStyle(box)['border-radius'];
+  const cssStyle = useState({
+    borderRadius: '50px',
+    background: '#e0e0e0',
+    boxShadow: '20px 20px 60px #bebebe, -20px -20px 60px #ffffff'
+  })
 
   function handleTopLeft(e){
     setTopLeft(e.target.value)
@@ -41,7 +47,7 @@ function App() {
                 <input 
                   type="number" 
                   className="form-control" 
-                  onInput={handleTopLeft}
+                  onChange={handleTopLeft}
                   value={topLeft} />
               </div>
             </section>
@@ -54,7 +60,7 @@ function App() {
                 <input 
                   type="number" 
                   className="form-control"
-                  onInput={handleTopRight}
+                  onChange={handleTopRight}
                   value={topRight} />
               </div>
             </section>
@@ -71,7 +77,7 @@ function App() {
                 <input 
                   type="number" 
                   className="form-control"
-                  onInput={handleBottomLeft}
+                  onChange={handleBottomLeft}
                   value={bottomLeft} />
               </div>
             </section>
@@ -84,25 +90,35 @@ function App() {
                 <input 
                   type="number" 
                   className="form-control" 
-                  onInput={handleBottomRight}
+                  onChange={handleBottomRight}
                   value={bottomRight} />
               </div>
             </section>
           </section>
         </div>
         &nbsp;
-        {/* <div className="col-2 box-wrap">
-          <p> Border-radius </p>
-        </div> */}
-        <div className="col-6 square">
-          <p className="row">
-            {topLeft}px : &nbsp; {topRight}px : &nbsp; {bottomLeft}px : &nbsp; {bottomRight}px
+        <div className="col-6 box">
+          <p className="row insidebox">
+            {(topLeft !== "" && topRight !== "") ? (
+              <p> {topLeft}px : &nbsp; {topRight}px</p>
+            ) : null}
+          </p>
+          <p className="row insidebox">
+            {(bottomLeft !== "" && bottomRight !== "") ? (
+              <p> {bottomLeft}px : &nbsp; {bottomRight}px </p>
+            ) : null}
           </p>
         </div>
       </div>
     </div>
   )
 }
+
+// const styles = {
+//   box: {
+//     borderRadius: {topLeft}px {topRight}px {bottomLeft}px {bottomRight}px,
+//   }
+// }
 
 export default App;
 
